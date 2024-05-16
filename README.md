@@ -27,11 +27,9 @@ Para começar com o SQL, siga estas etapas:
 
 O repositório está organizado da seguinte forma:
 
-
 - `docker-tutorial/`: Pasta contendo o tutorial de Docker. O arquivo `README.md` dentro desta pasta conterá o exemplo de código e sua funcionalidade.
 
-- `src/`: Este diretório é reservado para armazenar arquivos de banco de dados. Cada arquivo deve ser nomeado de acordo com o assunto que aborda.
-
+- `scripts/`: Este diretório é reservado para armazenar arquivos de banco de dados. Cada arquivo deve ser nomeado de acordo com o assunto que aborda.
 
 ## Projetos
 

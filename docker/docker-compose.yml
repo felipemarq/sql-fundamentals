@@ -4,6 +4,8 @@ services:
   postgres:
     image: 'postgres:latest'
     container_name: sql-fundamentals
+    volumes:
+      - ../scripts:/scripts
     environment:
         POSTGRES_USER : "root" 
         POSTGRES_PASSWORD: "root" 

@@ -49,3 +49,19 @@ services:
 Este arquivo `docker-compose.yml` define um serviço chamado `postgres` que utiliza a imagem `postgres:latest`. Ele define as variáveis de ambiente `POSTGRES_USER` e `POSTGRES_PASSWORD` como "root" para simplificar o processo de configuração. Além disso, mapeia a porta 5432 do host para a porta 5432 do contêiner para permitir o acesso ao PostgreSQL.
 
 Para executar o contêiner usando `docker-compose`, basta navegar até o diretório contendo
+
+### Comando:
+
+```bash
+docker exec -it sql-fundamentals bash
+
+
+### Descrição:
+
+- `docker exec`: Comando para executar um comando dentro de um contêiner em execução.
+- `-it`: Opções que permitem interação com o terminal do contêiner.
+- `sql-fundamentals`: Nome do contêiner que você deseja acessar.
+- `bash`: Comando que você deseja executar dentro do contêiner, neste caso, abre um shell Bash dentro do contêiner.
+```
+
+Este comando permite acessar o shell interativo dentro do contêiner `sql-fundamentals`, facilitando a execução de comandos e interação com o ambiente do contêiner.

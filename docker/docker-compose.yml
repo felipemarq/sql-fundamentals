@@ -1,12 +1,11 @@
 version: '3'
 
 services:
-  postegres:
+  postgres:
     image: 'postgres:latest'
     container_name: sql-fundamentals
-    entrypoint:
-       - POSTGRES_USER : root 
-       - POSTGRES_PASSWORD: root 
-
+    environment:
+        POSTGRES_USER : "root" 
+        POSTGRES_PASSWORD: "root" 
     ports:
       - "5432:5432"

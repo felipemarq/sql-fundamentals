@@ -25,3 +25,27 @@ docker run --name -e POSTGRES_USER=root -e POSTGRES_PASSWORD=root -p 5432:5432 -
 - `-p 5432:5432`: Mapeia a porta 5432 do host para a porta 5432 do contêiner, permitindo acessar o PostgreSQL do host.
 - `-d`: Executa o contêiner em segundo plano (modo "detached").
 - `postgres`: Especifica a imagem do Docker a ser usada para criar o contêiner, neste caso, o PostgreSQL.
+
+## Usando docker-compose
+
+Além do comando `docker run`, você também pode utilizar o arquivo `docker-compose.yml` fornecido para facilitar o processo de criação e execução do contêiner PostgreSQL.
+
+### Conteúdo do docker-compose.yml:
+
+```yaml
+version: "3"
+
+services:
+  postgres:
+    image: "postgres:latest"
+    container_name: sql-fundamentals
+    environment:
+      POSTGRES_USER: "root"
+      POSTGRES_PASSWORD: "root"
+    ports:
+      - "5432:5432"
+```
+
+Este arquivo `docker-compose.yml` define um serviço chamado `postgres` que utiliza a imagem `postgres:latest`. Ele define as variáveis de ambiente `POSTGRES_USER` e `POSTGRES_PASSWORD` como "root" para simplificar o processo de configuração. Além disso, mapeia a porta 5432 do host para a porta 5432 do contêiner para permitir o acesso ao PostgreSQL.
+
+Para executar o contêiner usando `docker-compose`, basta navegar até o diretório contendo

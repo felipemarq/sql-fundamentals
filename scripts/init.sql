@@ -1,3 +1,5 @@
+DROP DATABASE practice_db;
+
 CREATE DATABASE practice_db;
 
 -- Este comando conecta ao banco de dados chamado "practice_db"
@@ -22,8 +24,9 @@ DROP TABLE IF EXISTS orders;
 -- Este comando cria a tabela "orders" se ela não existir
 CREATE TABLE IF NOT EXISTS orders (
     id SERIAL PRIMARY KEY, -- Cria uma coluna de identificação automática
-    customer_id INT FOREIGN KEY, -- Cria uma coluna para o ID do cliente relacionado ao pedido
-    amount NUMERIC(7,2) -- Cria uma coluna para o valor do pedido, com até 7 dígitos, sendo 2 deles para casas decimais
+    customer_id INT, -- Cria uma coluna para o ID do cliente relacionado ao pedido
+    amount NUMERIC(7,2),
+    FOREIGN KEY (customer_id) REFERENCES customers(id) ON DELETE CASCADE ON UPDATE CASCADE-- Cria uma coluna para o valor do pedido, com até 7 dígitos, sendo 2 deles para casas decimais
 );
 
 -- Seed DB
